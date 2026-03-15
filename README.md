@@ -1,7 +1,6 @@
 # Data Analytics Portfolio 
 
-[Yejun Yang]
-
+#### Yejun Yang
 Welcome to my project repository. I specialize in transforming large-scale, actual datasets into actionable business intelligence using **Excel** (Power Query) and **Tableau**.
 
 ## Japanese Restaurant Sales Report/Analysis (2024-2025)
