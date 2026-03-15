@@ -1,18 +1,24 @@
-# Japanese Restaurant Sales Report/Analysis (2024-2025)
+# Data Analytics Portfolio 
 
-## Project Objective
+[Yejun Yang] [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](www.linkedin.com/in/yejun-yang)
+
+Welcome to my project repository. I specialize in transforming large-scale, actual datasets into actionable business intelligence using **Excel** (Power Query) and **Tableau**.
+
+## Japanese Restaurant Sales Report/Analysis (2024-2025)
+
+### Project Objective
 To process 24 months of high-volume restaurant data by performing large-scale data cleaning on 220,000+ records, developing categorized tables, and creating interactive charts to identify operational trends.
 
 ### Data Transformation & ETL Process
-The raw data was exported in a "Report-Style" format, which required significant restructuring to become a "Flat-File" database ready for analysis.
+The raw data was exported in a very messy .xls format, which required significant restructuring to become database ready for analysis.
 
-**Key Achievement:** Successfully reconciled 220,000+ rows down to 140,000 high-integrity records with **99.54% accuracy.**
+Key Achievement: Successfully reconciled 220,000+ rows down to 140,000 high-integrity records.
 
-#### **Technical Implementation**
-I developed a custom M-function in Power Query to handle the "dirty" data. This function used pattern recognition to extract dates and categories trapped in row headers.
+### **Technical Implementation**
+In order to extract useful data, I developed a custom M-function in Power Query to handle the "messy" data. This function used pattern recognition to extract dates and categories trapped in row headers.
 
 <details>
-  <summary><b>▶ Click to view Advanced ETL Logic (M Code)</b></summary>
+  <summary><b> Click to view Advanced Editor (ETL Logic)</b></summary>
 
   ```powerquery
   (pFileContents as binary) =>
@@ -48,7 +54,7 @@ I developed a custom M-function in Power Query to handle the "dirty" data. This 
 </details>
 
 <details>
-<summary><b>▶ Click to view Main Pipeline Logic (Folder Ingestion & Tiering)</b></summary>
+<summary><b> Click to view Main Pipeline Logic (Folder Ingestion & Tiering)</b></summary>
 
   ```
 let
@@ -66,7 +72,7 @@ let
   #"Standardize Case" = Table.TransformColumns(#"Normalize Text",{{"Item", Text.Upper, type text}}),
   #"Clean Artifacts" = Table.ReplaceValue(#"Standardize Case",".","",Replacer.ReplaceText,{"Item"}),
   
-  // 4. STRATEGIC CATEGORIZATION (Bilingual Mapping Logic)
+  // 4. CORRECTING CATEGORIZATION
   #"Categorized Departments" = Table.AddColumn(#"Clean Artifacts", "Department", each 
       if Text.Contains([Item], "SUSHI SASHIMI BENTO") then "Sushi Bar" 
       else if Text.Contains([Item], "ROLL COMBO") then "Sushi Bar" 
@@ -85,7 +91,7 @@ in
 </details>
 
 ## 📂 Project File Online Links
-* [Japanese Restaurant Sales Analysis on Tableau Public](https://public.tableau.com/views/JapaneseRestaurantSalesAnalysis/Executive)
+* [Japanese Restaurant Sales Analysis on Tableau Public](https://public.tableau.com/shared/3TWG8DMH3?:display_count=n&:origin=viz_share_link)
 * [Japanese Restaurant Sales Report Excel (OneDrive)](https://1drv.ms/x/c/C1FE1EBC08CFEC75/IQA3rr2MOiq5RoGNvQoN629NAdfF9qDp2eOlrpB5UvFobk0?e=hiP4Zm)
-* [BlueOwl Sales and Profit Report on Tableau Public](https://public.tableau.com/views/BlueOwlSalesProfitReport/BlueOwl)
+* [BlueOwl Sales and Profit Report on Tableau Public](https://public.tableau.com/shared/R5CS7CHBT?:display_count=n&:origin=viz_share_link)
 * [BlueOwl Sales and Profit Report on Excel (OneDrive)](https://1drv.ms/x/c/C1FE1EBC08CFEC75/IQDNCjTactKHQJdwZAppOxItAWaLraXD1vjB5DuXN1AocdA?e=FrECeo )
