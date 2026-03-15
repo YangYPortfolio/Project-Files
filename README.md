@@ -1,6 +1,6 @@
 # Data Analytics Portfolio 
 
-[Yejun Yang] [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](www.linkedin.com/in/yejun-yang)
+[Yejun Yang]
 
 Welcome to my project repository. I specialize in transforming large-scale, actual datasets into actionable business intelligence using **Excel** (Power Query) and **Tableau**.
 
