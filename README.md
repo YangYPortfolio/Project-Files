@@ -1,14 +1,14 @@
-# 📊 Japanese Restaurant Sales Report/Analysis (2024-2025)
+# Japanese Restaurant Sales Report/Analysis (2024-2025)
 
-## 🎯 Project Objective
+## Project Objective
 To process 24 months of high-volume restaurant data by performing large-scale data cleaning on 220,000+ records, developing categorized tables, and creating interactive charts to identify operational trends.
 
-## 🛠️ Data Transformation & ETL Process
+### Data Transformation & ETL Process
 The raw data was exported in a "Report-Style" format, which required significant restructuring to become a "Flat-File" database ready for analysis.
 
 **Key Achievement:** Successfully reconciled 220,000+ rows down to 140,000 high-integrity records with **99.54% accuracy.**
 
-### **Technical Implementation**
+#### **Technical Implementation**
 I developed a custom M-function in Power Query to handle the "dirty" data. This function used pattern recognition to extract dates and categories trapped in row headers.
 
 <details>
@@ -83,3 +83,9 @@ in
   #"Assigned Menu Tier"
 ```
 </details>
+
+## 📂 Project File Online Links
+* [Japanese Restaurant Sales Analysis on Tableau Public](https://public.tableau.com/views/JapaneseRestaurantSalesAnalysis/Executive)
+* [Japanese Restaurant Sales Report Excel (OneDrive)](https://1drv.ms/x/c/C1FE1EBC08CFEC75/IQA3rr2MOiq5RoGNvQoN629NAdfF9qDp2eOlrpB5UvFobk0?e=hiP4Zm)
+* [BlueOwl Sales and Profit Report on Tableau Public](https://public.tableau.com/views/BlueOwlSalesProfitReport/BlueOwl)
+* [BlueOwl Sales and Profit Report on Excel (OneDrive)](https://1drv.ms/x/c/C1FE1EBC08CFEC75/IQDNCjTactKHQJdwZAppOxItAWaLraXD1vjB5DuXN1AocdA?e=FrECeo )
